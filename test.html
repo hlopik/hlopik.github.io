@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript">
+		function addOne () {
+			var ids = [302, 130, 164, 226, 298, 410, 432, 454, 464, 788, 808, 964, 62, 182, 212, 222, 550, 838, 866, 888, 900, 1026];
+			for (var i = ids.length - 1; i >= 0; i--) {
+				$.ajax({
+					url : "http://talisman.championat.com/response.php",
+					type: "POST",
+				 	data : {"id" : ids[i]}
+				});
+			};
+		}
+
+		function addMultiple () {
+			for (var i = parseInt($("#count").val()); i > 0; i--) {
+				addOne();
+			};
+		}
+	</script>
+</head>
+<body>
+	<button onclick="addOne();">Добавить всем по голосу</button><br/>
+	<button onclick="addMultiple();">Добавить всем </button>
+	<input type="text" id="count" size="4" value="10"> голосов
+	<br/>
+	<br/>
+	<table><tbody>
+	<tr>
+	<td><img src='http://img.championat.com/special/talisman/1424878824516932602.jpg' width='280px'><br/><center>Филя</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14248764741428166989.jpg' width='280px'><br/><center>Медведь Россия</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14248771091529939011.jpg' width='280px'><br/><center>Самовар Пар Парыч</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424877981861385540.jpg' width='280px'><br/><center>Дракон</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14248787901134156580.jpg' width='280px'><br/><center>Кит Единорожка</center></td>
+	</tr>
+	<tr>
+	<td><img src='http://img.championat.com/special/talisman/14250339041139948761.jpg' width='280px'><br/><center>матрёшка Шабочка</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14249562531996181911.jpg' width='280px'><br/><center>Петушок Петя</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14248820981679741441.jpg' width='280px'><br/><center>Авангард игры</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14249597231796669647.jpg' width='280px'><br/><center>Хлопик</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424871829843764171.jpg' width='280px'><br/><center>Зайчик-талисманчик</center></td>
+	</tr>
+	<tr>
+	<td><img src='http://img.championat.com/special/talisman/1424872482838279766.jpg' width='280px'><br/><center>Петя</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14249396722086041366.jpg' width='280px'><br/><center>Фантомас</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424873995853652464.jpg' width='280px'><br/><center>Снегирь Сема</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424877285478490813.jpg' width='280px'><br/><center>Суслик — Хоккеист</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424877838821222381.jpg' width='280px'><br/><center>Дымок</center></td>
+	</tr>
+	<tr>
+	<td><img src='http://img.championat.com/special/talisman/1424877952789586974.jpg' width='280px'><br/><center>Шайбаед</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424883971975407363.jpg' width='280px'><br/><center>Медалик</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14249591081597231221.jpg' width='280px'><br/><center>Богатырь</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14249590501518736350.jpg' width='280px'><br/><center>Ярик</center></td>
+	<td><img src='http://img.championat.com/special/talisman/1424892246644653904.jpg' width='280px'><br/><center>Зайка хоккеист</center></td>
+	</tr>
+	<tr>
+	<td><img src='http://img.championat.com/special/talisman/14249389601704451416.jpg' width='280px'><br/><center>Ростик</center></td>
+	<td><img src='http://img.championat.com/special/talisman/14249430391491972908.jpg' width='280px'><br/><center>Самоварчик Проша</center></td>
+	</tr>
+	</tbody></table>
+</body>
+</html>
